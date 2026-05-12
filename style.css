@@ -40,21 +40,22 @@ img {
 .page-shell {
     width: min(100%, 1665px);
     margin: 0 auto;
-    padding: 52px 52px 26px;
+    padding: 48px 52px 26px;
 }
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
-    background: var(--surface);
+    gap: 22px;
+    min-height: 86px;
+    background: #f7f7f2;
     border-radius: 999px;
-    padding: 12px 18px 12px 40px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    padding: 12px 15px 12px 37px;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
     position: relative;
     z-index: 2;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .brand {
@@ -62,7 +63,7 @@ img {
 }
 
 .brand img {
-    width: 124px;
+    width: 128px;
     height: auto;
 }
 
@@ -74,22 +75,38 @@ img {
 .menu {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 35px;
     flex: 1 1 auto;
-    padding-left: 34px;
+    padding-left: 38px;
 }
 
 .menu a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
     color: #1c2232;
-    font-size: 0.98rem;
-    font-weight: 500;
+    font-size: 0.96rem;
+    font-weight: 600;
     line-height: 1;
+    transition: opacity 0.2s ease;
+}
+
+.menu a:hover {
+    opacity: 0.68;
+}
+
+.nav-caret {
+    width: 7px;
+    height: 7px;
+    border-right: 1.8px solid currentColor;
+    border-bottom: 1.8px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
 }
 
 .actions {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     flex: 0 0 auto;
 }
 
@@ -120,23 +137,29 @@ img {
     align-items: center;
     justify-content: center;
     min-height: 62px;
-    padding: 0 28px;
+    padding: 0 27px;
     border-radius: 14px;
-    font-size: 0.98rem;
-    font-weight: 600;
+    font-size: 0.96rem;
+    font-weight: 700;
     white-space: nowrap;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.login:hover,
+.signup:hover {
+    transform: translateY(-1px);
 }
 
 .login {
-    background: var(--surface-soft);
-    color: #000;
+    background: #eeede8;
+    color: #1d2435;
 }
 
 .signup {
     background: var(--navy);
     color: #fff;
     border-radius: 999px;
-    padding-inline: 32px;
+    padding-inline: 33px;
 }
 
 .hero {
@@ -376,6 +399,7 @@ img {
 
     .navbar {
         flex-wrap: wrap;
+        min-height: auto;
         border-radius: 34px;
         padding: 18px 20px 20px 24px;
     }
@@ -450,8 +474,9 @@ img {
 
     .navbar {
         flex-wrap: nowrap;
-        gap: 10px;
-        padding: 13px 17px 13px 21px;
+        gap: 8px;
+        min-height: 66px;
+        padding: 11px 12px 11px 19px;
         border-radius: 999px;
         margin-bottom: 0;
         width: 100%;
@@ -476,36 +501,36 @@ img {
     }
 
     .actions {
-        gap: 10px;
+        gap: 8px;
         margin-left: auto;
     }
 
     .login,
     .signup {
-        min-height: 42px;
-        font-size: 0.88rem;
+        min-height: 44px;
+        font-size: 0.86rem;
     }
 
     .login {
-        padding: 0 18px;
+        padding: 0 17px;
         border-radius: 10px;
     }
 
     .signup {
-        min-width: 112px;
-        padding: 0 20px;
+        min-width: 113px;
+        padding: 0 18px;
     }
 
     .menu-toggle {
         display: inline-flex;
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
         margin-left: 0;
     }
 
     .menu-toggle span {
-        width: 18px;
-        height: 2px;
+        width: 19px;
+        height: 2.5px;
     }
 
     .hero {
@@ -702,7 +727,8 @@ img {
 
     .navbar {
         gap: 8px;
-        padding: 12px 15px 12px 17px;
+        min-height: 62px;
+        padding: 10px 10px 10px 15px;
         width: 100%;
         margin-inline: 0;
     }
@@ -714,17 +740,17 @@ img {
 
     .login,
     .signup {
-        min-height: 39px;
+        min-height: 40px;
         font-size: 0.8rem;
     }
 
     .login {
-        padding: 0 14px;
+        padding: 0 13px;
     }
 
     .signup {
-        min-width: 102px;
-        padding: 0 14px;
+        min-width: 103px;
+        padding: 0 13px;
     }
 
     .menu-toggle {

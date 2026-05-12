@@ -296,6 +296,79 @@ img {
     letter-spacing: 0.035em;
 }
 
+.creator-section,
+.steps-section {
+    padding: 96px 44px 0;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 36px;
+}
+
+.section-heading h2 {
+    color: var(--lime);
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    margin-bottom: 22px;
+}
+
+.section-heading p {
+    max-width: 650px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.08rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.feature-grid,
+.steps-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.feature-card,
+.step-card {
+    min-height: 245px;
+    padding: 30px;
+    border-radius: 24px;
+    background: var(--surface);
+    color: var(--navy);
+}
+
+.feature-card h3,
+.step-card h3 {
+    font-size: clamp(1.35rem, 2vw, 2rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.035em;
+    margin-bottom: 16px;
+}
+
+.feature-card p,
+.step-card p {
+    color: rgba(29, 36, 53, 0.76);
+    font-size: 0.98rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 24px;
+    border-radius: 50%;
+    background: var(--lime);
+    color: var(--navy);
+    font-weight: 800;
+}
+
 @media (max-width: 1180px) {
     .page-shell {
         padding: 24px 28px 28px;
@@ -350,6 +423,16 @@ img {
 
     .hero-media {
         padding-top: 0;
+    }
+
+    .creator-section,
+    .steps-section {
+        padding: 72px 10px 0;
+    }
+
+    .feature-grid,
+    .steps-list {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -572,6 +655,38 @@ img {
         padding: 0 18px;
         font-size: 0.7rem;
         letter-spacing: 0.02em;
+    }
+
+    .creator-section,
+    .steps-section {
+        padding: 58px 0 0;
+    }
+
+    .section-heading {
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(2rem, 10vw, 2.75rem);
+        line-height: 1;
+        margin-bottom: 18px;
+    }
+
+    .section-heading p {
+        font-size: 1rem;
+    }
+
+    .feature-card,
+    .step-card {
+        min-height: auto;
+        padding: 24px;
+        border-radius: 20px;
+    }
+
+    .feature-card h3,
+    .step-card h3 {
+        font-size: 1.55rem;
     }
 }
 

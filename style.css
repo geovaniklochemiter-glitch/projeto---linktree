@@ -703,4 +703,5 @@ img {
     .image-card {
         border-radius: 20px;
     }
+    .escondido { display: none; }
 }

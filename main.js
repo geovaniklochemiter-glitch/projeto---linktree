@@ -69,6 +69,12 @@ function iniciarAplicacao() {
     if (evento.key === "Enter") executarBusca();
   });
 
+  inputBusca.addEventListener("input", () => {
+    if (inputBusca.value.trim().length >= TAMANHO_MINIMO_BUSCA) {
+      limparErro();
+    }
+  });
+
   _configurarDelegacaoFavoritos(elementoResultados);
   _configurarDelegacaoFavoritos(elementoFavoritos);
 

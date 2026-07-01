@@ -1,4 +1,4 @@
-const TAMANHO_MINIMO_BUSCA = 5;
+const TAMANHO_MINIMO_BUSCA = 3;
 
 const inputBusca  = document.getElementById("campo-busca");
 const botaoBuscar = document.getElementById("btn-buscar");
@@ -76,4 +76,3 @@ function iniciarAplicacao() {
 }
 
 document.addEventListener("DOMContentLoaded", iniciarAplicacao);
-EOF

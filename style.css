@@ -705,3 +705,328 @@ img {
     }
     .escondido { display: none; }
 }
+ 
+/* ==========================================================================
+   UTILITÁRIOS
+   ========================================================================== */
+ 
+.sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+ 
+.escondido {
+    display: none !important;
+}
+ 
+/* ==========================================================================
+   SEÇÕES: BUSCA E FAVORITOS
+   Seguem a mesma paleta do hero: fundo verde #254f1a, texto lima #d7f205,
+   cards no surface claro para contrastar e facilitar leitura.
+   ========================================================================== */
+ 
+.secao-busca,
+.secao-favoritos {
+    width: 100%;
+    padding: 80px 0 72px;
+}
+ 
+.secao-favoritos {
+    background: rgba(0, 0, 0, 0.18); /* faixa levemente mais escura */
+    border-top: 1px solid rgba(215, 242, 5, 0.12);
+}
+ 
+.secao-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 52px;
+}
+ 
+.secao-header {
+    margin-bottom: 36px;
+}
+ 
+.secao-header h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    color: var(--lime);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+ 
+.secao-subtitulo {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.62);
+    max-width: 52ch;
+}
+ 
+/* ---------- Formulário de busca ---------- */
+ 
+.busca-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    max-width: 680px;
+}
+ 
+.busca-form input {
+    flex: 1;
+    min-width: 200px;
+    padding: 0 22px;
+    height: 58px;
+    border: 1.5px solid rgba(215, 242, 5, 0.3);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 0.97rem;
+    font-weight: 500;
+    outline: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+ 
+.busca-form input::placeholder {
+    color: rgba(255, 255, 255, 0.38);
+}
+ 
+.busca-form input:focus {
+    border-color: var(--lime);
+    background: rgba(255, 255, 255, 0.1);
+}
+ 
+.busca-form button {
+    height: 58px;
+    padding: 0 32px;
+    border: none;
+    border-radius: 999px;
+    background: var(--lime);
+    color: #1a2e0a;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 0.97rem;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease;
+    white-space: nowrap;
+}
+ 
+.busca-form button:hover {
+    background: #c8e304;
+    transform: translateY(-1px);
+}
+ 
+.busca-form button:active {
+    transform: translateY(0);
+}
+ 
+/* ---------- Mensagem de erro ---------- */
+ 
+.msg-erro {
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    border-radius: 12px;
+    padding: 12px 18px;
+    margin-bottom: 20px;
+    max-width: 680px;
+}
+ 
+/* ---------- Loading animado (3 pontos) ---------- */
+ 
+.loading-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+ 
+.loading-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--lime);
+    animation: pulsar 1.2s ease-in-out infinite;
+}
+ 
+.loading-dot:nth-child(2) { animation-delay: 0.2s; }
+.loading-dot:nth-child(3) { animation-delay: 0.4s; }
+ 
+@keyframes pulsar {
+    0%, 100% { opacity: 0.2; transform: scale(0.75); }
+    50%       { opacity: 1;   transform: scale(1); }
+}
+ 
+/* ---------- Grid de cards ---------- */
+ 
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 18px;
+}
+ 
+.grid-cards > p {
+    /* mensagem de "sem resultados" / "sem favoritos" */
+    grid-column: 1 / -1;
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.45);
+    font-style: italic;
+}
+ 
+/* ---------- Card de resultado ---------- */
+ 
+.card-personagem {
+    background: var(--surface);        /* #f7f7f2 — mesmo tom da navbar */
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+.card-personagem:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.32);
+}
+ 
+.card-imagem {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+ 
+.card-info {
+    padding: 14px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+ 
+.card-nome {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 0.97rem;
+    color: var(--navy);
+    margin: 0;
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ 
+.card-detalhe {
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    color: #666;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ 
+/* ---------- Botão de favoritar ---------- */
+ 
+.btn-favorito {
+    margin-top: 12px;
+    padding: 9px 14px;
+    border: 1.5px solid var(--navy);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--navy);
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    text-align: center;
+}
+ 
+.btn-favorito:hover {
+    background: var(--navy);
+    color: #fff;
+}
+ 
+.btn-favorito.ativo {
+    background: var(--lime);
+    border-color: var(--lime);
+    color: #1a2e0a;
+}
+ 
+.btn-favorito.ativo:hover {
+    background: #c8e304;
+    border-color: #c8e304;
+}
+ 
+/* ==========================================================================
+   RESPONSIVO — BUSCA E FAVORITOS
+   ========================================================================== */
+ 
+@media (max-width: 1180px) {
+    .secao-inner {
+        padding: 0 28px;
+    }
+}
+ 
+@media (max-width: 760px) {
+    .secao-busca,
+    .secao-favoritos {
+        padding: 52px 0 48px;
+    }
+ 
+    .secao-inner {
+        padding: 0 16px;
+    }
+ 
+    .secao-header h2 {
+        font-size: clamp(1.7rem, 7vw, 2.2rem);
+    }
+ 
+    .busca-form {
+        flex-direction: column;
+        max-width: 100%;
+    }
+ 
+    .busca-form input,
+    .busca-form button {
+        width: 100%;
+    }
+ 
+    .grid-cards {
+        grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+        gap: 12px;
+    }
+}
+ 
+@media (max-width: 380px) {
+    .grid-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+ 
+/* Link de crédito ao fotógrafo (exigência das diretrizes da Unsplash) */
+.card-link a {
+    color: #254f1a;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: opacity 0.15s ease;
+}
+ 
+.card-link a:hover {
+    opacity: 0.7;
+}

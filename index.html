@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +13,14 @@
     <div class="page-shell">
         <header class="navbar">
             <a class="brand" href="#" aria-label="Linktree home">
-                <img
-                    class="brand-desktop"
+                <img class="brand-desktop"
                     src="https://cdn.prod.website-files.com/666255f7f2126f4e8cec6f8f/66634daccb34e6d65a41c76d_download.svg"
-                    alt="Linktree"
-                >
-                <img
-                    class="brand-mobile"
+                    alt="Linktree">
+                <img class="brand-mobile"
                     src="https://cdn.prod.website-files.com/666255f7f2126f4e8cec6f8f/666b48ad59add9f2777bb76f_download-2.svg"
-                    alt="Linktree"
-                >
+                    alt="Linktree">
             </a>
-
+ 
             <nav class="menu" aria-label="Primary">
                 <a href="#">Products <span class="nav-caret" aria-hidden="true"></span></a>
                 <a href="#">Templates <span class="nav-caret" aria-hidden="true"></span></a>
@@ -32,69 +28,114 @@
                 <a href="#">Learn <span class="nav-caret" aria-hidden="true"></span></a>
                 <a href="#">Pricing</a>
             </nav>
-
+ 
             <div class="actions">
                 <a class="login" href="#">Log in</a>
                 <a class="signup" href="#">Sign up free</a>
             </div>
-
+ 
             <button class="menu-toggle" type="button" aria-label="Open menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </header>
-
+ 
         <main>
-        <section class="hero" aria-labelledby="hero-title">
-            <section class="hero-copy">
-                <h1 id="hero-title">
-                    <span class="title-set title-set-desktop">
-                        <span class="title-line">Help your followers</span>
-                        <span class="title-line">discover everything you</span>
-                        <span class="title-line">do, with one simple link</span>
-                    </span>
-                    <span class="title-set title-set-mobile">
-                        <span class="title-line">Help your followers</span>
-                        <span class="title-line">discover everything</span>
-                        <span class="title-line">you do, with one</span>
-                        <span class="title-line">simple link</span>
-                    </span>
-                </h1>
-
-                <p class="subtitle">
-                    The #1 Link In Bio Tool to help you share
-                    <br class="subtitle-break">
-                    everything you create, curate and sell
-                </p>
-
-                <div class="hero-cta-group">
-                    <a class="cta" href="#">Try 7 Days Free</a>
-
-                    <div class="social-proof">
-                        <span class="proof-check" aria-hidden="true">&#10003;</span>
-                        <span class="proof-text">Chosen by 70+ million users</span>
-
-                        <span class="proof-avatars" aria-hidden="true">
-                            <img
-                                src="https://cdn.prod.website-files.com/666255f7f2126f4e8cec6f8f/67805c840b84fce56e6c378a_Group%201597880574.png"
-                                alt=""
-                            >
+            <section class="hero" aria-labelledby="hero-title">
+                <section class="hero-copy">
+                    <h1 id="hero-title">
+                        <span class="title-set title-set-desktop">
+                            <span class="title-line">Help your followers</span>
+                            <span class="title-line">discover everything you</span>
+                            <span class="title-line">do, with one simple link</span>
                         </span>
+                        <span class="title-set title-set-mobile">
+                            <span class="title-line">Help your followers</span>
+                            <span class="title-line">discover everything</span>
+                            <span class="title-line">you do, with one</span>
+                            <span class="title-line">simple link</span>
+                        </span>
+                    </h1>
+ 
+                    <p class="subtitle">
+                        The #1 Link In Bio Tool to help you share
+                        <br class="subtitle-break">
+                        everything you create, curate and sell
+                    </p>
+ 
+                    <div class="hero-cta-group">
+                        <a class="cta" href="#">Try 7 Days Free</a>
+ 
+                        <div class="social-proof">
+                            <span class="proof-check" aria-hidden="true">&#10003;</span>
+                            <span class="proof-text">Chosen by 70+ million users</span>
+                            <span class="proof-avatars" aria-hidden="true">
+                                <img src="https://cdn.prod.website-files.com/666255f7f2126f4e8cec6f8f/67805c840b84fce56e6c378a_Group%201597880574.png" alt="">
+                            </span>
+                        </div>
                     </div>
+ 
+                    <p class="note">*Pro trial auto renews into paid plan. Cancel anytime.</p>
+                </section>
+ 
+                <section class="hero-media" aria-label="Featured creator preview">
+                    <figure class="image-card">
+                        <img src="img.webp" alt="Zay Dante featured creator preview">
+                        <figcaption>Zay Dante. Creator and musician.</figcaption>
+                    </figure>
+                </section>
+            </section>
+ 
+            <section class="secao-busca" id="secao-busca" aria-labelledby="busca-title">
+                <div class="secao-inner">
+                    <div class="secao-header">
+                        <h2 id="busca-title">Explore conteúdo</h2>
+                        <p class="secao-subtitulo">
+                            Descubra imagens e inspire seu próximo link. Busque por tema, estilo ou categoria.
+                        </p>
+                    </div>
+ 
+                    <div class="busca-form">
+                        <label for="campo-busca" class="sr-only">Tema ou palavra-chave</label>
+                        <input
+                            type="text"
+                            id="campo-busca"
+                            placeholder="Ex: music, photography, art…"
+                            autocomplete="off"
+                            spellcheck="false"
+                        >
+                        <button type="button" id="btn-buscar">Buscar</button>
+                    </div>
+ 
+                    <p id="mensagem-erro" class="msg-erro escondido" role="alert" aria-live="polite"></p>
+ 
+                    <div id="loading" class="loading-wrap escondido" aria-label="Carregando resultados">
+                        <span class="loading-dot"></span>
+                        <span class="loading-dot"></span>
+                        <span class="loading-dot"></span>
+                    </div>
+ 
+                    <div id="resultados-busca" class="grid-cards" role="region" aria-label="Resultados da busca"></div>
                 </div>
-
-                <p class="note">*Pro trial auto renews into paid plan. Cancel anytime.</p>
             </section>
 
-            <section class="hero-media" aria-label="Featured creator preview">
-                <figure class="image-card">
-                    <img src="img (1).webp" alt="Zay Dante featured creator preview">
-                    <figcaption>Zay Dante. Creator and musician.</figcaption>
-                </figure>
+            <section class="secao-favoritos" id="secao-favoritos" aria-labelledby="favoritos-title">
+                <div class="secao-inner">
+                    <div class="secao-header">
+                        <h2 id="favoritos-title">Seus favoritos</h2>
+                        <p class="secao-subtitulo">
+                            Conteúdos salvos ficam aqui, mesmo após fechar o navegador.
+                        </p>
+                    </div>
+ 
+                    <div id="lista-favoritos" class="grid-cards" role="region" aria-label="Lista de favoritos"></div>
+                </div>
             </section>
-        </section>
         </main>
     </div>
+ 
+    <script src="storage.js"></script>
+    <script src="api.js"></script>
+    <script src="ui.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
